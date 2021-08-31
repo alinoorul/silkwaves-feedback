@@ -1,0 +1,28 @@
+{
+  "name": "silkwaves-feedback",
+  "version": "1.0.0",
+  "description": "backend for feedback app",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server",
+    "server": "cross-env NODE_ENV=development nodemon server",
+    "client": "npm start --prefix silkwaves-feedback-frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Noorul Ali",
+  "license": "MIT",
+  "dependencies": {
+    "connect-mongo": "^4.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.12"
+  }
+}
