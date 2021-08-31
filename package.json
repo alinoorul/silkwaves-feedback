@@ -4,7 +4,7 @@
   "description": "backend for feedback app",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node server",
+    "start": "node server",
     "server": "cross-env NODE_ENV=development nodemon server",
     "client": "npm start --prefix silkwaves-feedback-frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
