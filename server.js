@@ -30,9 +30,9 @@ if(process.env.NODE_ENV === 'development') {
 app.use('/api/v1/feedback', feedback)
 
 if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('dist/silkwaves-feedback-frontend'));
+    app.use(express.static('client/'));
 
-    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'dist', 'silkwaves-feedback-frontend', 'index.html')));
+    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'index.html')));
 }
 
 const PORT = process.env.PORT || 5000
